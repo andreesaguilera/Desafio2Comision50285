@@ -204,158 +204,158 @@ internal class Program
 
                         ProductoData.EliminarProducto(productoEliminado);
                         break;
-                    case 11:
-                        Console.WriteLine("Obtener ProductoVendido ingresar Id: ");
+                    //case 11:
+                    //    Console.WriteLine("Obtener ProductoVendido ingresar Id: ");
 
-                        string idString3 = Console.ReadLine();
-                        int Id3 = Convert.ToInt32(idString3);
-
-
-                        Usuario usuario = UsuarioData.ObtenerUsuario(Id3);
-
-                        Console.WriteLine(usuario.Nombre);
-                        Console.WriteLine(usuario.Apellido);
-                        Console.WriteLine(usuario.NombreUsuario);
-                        Console.WriteLine(usuario.Contrasenia);
-                        Console.WriteLine(usuario.Mail);
-
-                        Console.WriteLine("");
-                        break;
-                    case 12:
-                        List<Usuario> listarUsuario = UsuarioData.ListarUsuario();
-
-                        foreach (Usuario usuarioLista in listarUsuario)
-                        {
-
-                            Console.WriteLine("Nombre: " + usuarioLista.Nombre);
-                            Console.WriteLine("Apellido: " + usuarioLista.Apellido);
-                            Console.WriteLine("NombreUsuario: " + usuarioLista.NombreUsuario);
-                            Console.WriteLine("Contrasenia: " + usuarioLista.Contrasenia);
-                            Console.WriteLine("Mail: " + usuarioLista.Mail);
-
-                            Console.WriteLine("");
-
-                        }
-                        break;
-                    case 13:
-                        Usuario usuarioCreado = new Usuario();
-
-                        Console.WriteLine("Ingrese Nombre: ");
-                        usuarioCreado.Nombre = Console.ReadLine();
-                        Console.WriteLine("Ingrese Apellido: ");
-                        usuarioCreado.Apellido = Console.ReadLine();
-                        Console.WriteLine("Ingrese NombreUsuario: ");
-                        usuarioCreado.NombreUsuario = Console.ReadLine();
-                        Console.WriteLine("Ingrese Contrasenia: ");
-                        usuarioCreado.Contrasenia = Console.ReadLine();
-                        Console.WriteLine("Ingrese Mail: ");
-                        usuarioCreado.Mail = Console.ReadLine();
-
-                        UsuarioData.CrearUsuario(usuarioCreado);
+                    //    string idString3 = Console.ReadLine();
+                    //    int Id3 = Convert.ToInt32(idString3);
 
 
-                        break;
-                    case 14:
-                        Usuario usuarioModificado = new Usuario();
-                        Console.WriteLine("Ingrese Id a modificar: ");
-                        usuarioModificado.Id = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("Ingrese Nombre a modificar: ");
-                        usuarioModificado.Nombre = Console.ReadLine();
-                        Console.WriteLine("Ingrese Apellido a modificar: ");
-                        usuarioModificado.Apellido = Console.ReadLine();
-                        Console.WriteLine("Ingrese NombreUsuario a modificar: ");
-                        usuarioModificado.NombreUsuario = Console.ReadLine();
-                        Console.WriteLine("Ingrese Contrasenia a modificar: ");
-                        usuarioModificado.Contrasenia = Console.ReadLine();
-                        Console.WriteLine("Ingrese Mail a modificar: ");
-                        usuarioModificado.Mail = Console.ReadLine();
+                    //    Usuario usuario = UsuarioData.ObtenerUsuario(Id3);
 
-                        UsuarioData.ModificarUsuario(usuarioModificado);
+                    //    Console.WriteLine(usuario.Nombre);
+                    //    Console.WriteLine(usuario.Apellido);
+                    //    Console.WriteLine(usuario.NombreUsuario);
+                    //    Console.WriteLine(usuario.Contrasenia);
+                    //    Console.WriteLine(usuario.Mail);
 
-                        break;
-                    case 15:
-                        Usuario usuarioEliminado = new Usuario();
-                        Console.WriteLine("Ingrese Id a eliminar: ");
-                        usuarioEliminado.Id = Convert.ToInt32(Console.ReadLine());
+                    //    Console.WriteLine("");
+                    //    break;
+                    //case 12:
+                    //    List<Usuario> listarUsuario = UsuarioData.ListarUsuario();
 
-                        UsuarioData.EliminarUsuario(usuarioEliminado);
-                        break;
-                    case 16:
-                        Console.WriteLine("Obtener usuario ingresar Id: ");
+                    //    foreach (Usuario usuarioLista in listarUsuario)
+                    //    {
 
-                        string idString = Console.ReadLine();
-                        int Id = Convert.ToInt32(idString);
+                    //        Console.WriteLine("Nombre: " + usuarioLista.Nombre);
+                    //        Console.WriteLine("Apellido: " + usuarioLista.Apellido);
+                    //        Console.WriteLine("NombreUsuario: " + usuarioLista.NombreUsuario);
+                    //        Console.WriteLine("Contrasenia: " + usuarioLista.Contrasenia);
+                    //        Console.WriteLine("Mail: " + usuarioLista.Mail);
 
+                    //        Console.WriteLine("");
 
-                        Usuario usuario = UsuarioData.ObtenerUsuario(Id);
+                    //    }
+                    //    break;
+                    //case 13:
+                    //    Usuario usuarioCreado = new Usuario();
 
-                        Console.WriteLine(usuario.Nombre);
-                        Console.WriteLine(usuario.Apellido);
-                        Console.WriteLine(usuario.NombreUsuario);
-                        Console.WriteLine(usuario.Contrasenia);
-                        Console.WriteLine(usuario.Mail);
+                    //    Console.WriteLine("Ingrese Nombre: ");
+                    //    usuarioCreado.Nombre = Console.ReadLine();
+                    //    Console.WriteLine("Ingrese Apellido: ");
+                    //    usuarioCreado.Apellido = Console.ReadLine();
+                    //    Console.WriteLine("Ingrese NombreUsuario: ");
+                    //    usuarioCreado.NombreUsuario = Console.ReadLine();
+                    //    Console.WriteLine("Ingrese Contrasenia: ");
+                    //    usuarioCreado.Contrasenia = Console.ReadLine();
+                    //    Console.WriteLine("Ingrese Mail: ");
+                    //    usuarioCreado.Mail = Console.ReadLine();
 
-                        Console.WriteLine("");
-                        break;
-                    case 17:
-                        List<Usuario> listarUsuario = UsuarioData.ListarUsuario();
-
-                        foreach (Usuario usuarioLista in listarUsuario)
-                        {
-
-                            Console.WriteLine("Nombre: " + usuarioLista.Nombre);
-                            Console.WriteLine("Apellido: " + usuarioLista.Apellido);
-                            Console.WriteLine("NombreUsuario: " + usuarioLista.NombreUsuario);
-                            Console.WriteLine("Contrasenia: " + usuarioLista.Contrasenia);
-                            Console.WriteLine("Mail: " + usuarioLista.Mail);
-
-                            Console.WriteLine("");
-
-                        }
-                        break;
-                    case 18:
-                        Usuario usuarioCreado = new Usuario();
-
-                        Console.WriteLine("Ingrese Nombre: ");
-                        usuarioCreado.Nombre = Console.ReadLine();
-                        Console.WriteLine("Ingrese Apellido: ");
-                        usuarioCreado.Apellido = Console.ReadLine();
-                        Console.WriteLine("Ingrese NombreUsuario: ");
-                        usuarioCreado.NombreUsuario = Console.ReadLine();
-                        Console.WriteLine("Ingrese Contrasenia: ");
-                        usuarioCreado.Contrasenia = Console.ReadLine();
-                        Console.WriteLine("Ingrese Mail: ");
-                        usuarioCreado.Mail = Console.ReadLine();
-
-                        UsuarioData.CrearUsuario(usuarioCreado);
+                    //    UsuarioData.CrearUsuario(usuarioCreado);
 
 
-                        break;
-                    case 19:
-                        Usuario usuarioModificado = new Usuario();
-                        Console.WriteLine("Ingrese Id a modificar: ");
-                        usuarioModificado.Id = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("Ingrese Nombre a modificar: ");
-                        usuarioModificado.Nombre = Console.ReadLine();
-                        Console.WriteLine("Ingrese Apellido a modificar: ");
-                        usuarioModificado.Apellido = Console.ReadLine();
-                        Console.WriteLine("Ingrese NombreUsuario a modificar: ");
-                        usuarioModificado.NombreUsuario = Console.ReadLine();
-                        Console.WriteLine("Ingrese Contrasenia a modificar: ");
-                        usuarioModificado.Contrasenia = Console.ReadLine();
-                        Console.WriteLine("Ingrese Mail a modificar: ");
-                        usuarioModificado.Mail = Console.ReadLine();
+                    //    break;
+                    //case 14:
+                    //    Usuario usuarioModificado = new Usuario();
+                    //    Console.WriteLine("Ingrese Id a modificar: ");
+                    //    usuarioModificado.Id = Convert.ToInt32(Console.ReadLine());
+                    //    Console.WriteLine("Ingrese Nombre a modificar: ");
+                    //    usuarioModificado.Nombre = Console.ReadLine();
+                    //    Console.WriteLine("Ingrese Apellido a modificar: ");
+                    //    usuarioModificado.Apellido = Console.ReadLine();
+                    //    Console.WriteLine("Ingrese NombreUsuario a modificar: ");
+                    //    usuarioModificado.NombreUsuario = Console.ReadLine();
+                    //    Console.WriteLine("Ingrese Contrasenia a modificar: ");
+                    //    usuarioModificado.Contrasenia = Console.ReadLine();
+                    //    Console.WriteLine("Ingrese Mail a modificar: ");
+                    //    usuarioModificado.Mail = Console.ReadLine();
 
-                        UsuarioData.ModificarUsuario(usuarioModificado);
+                    //    UsuarioData.ModificarUsuario(usuarioModificado);
 
-                        break;
-                    case 20:
-                        Usuario usuarioEliminado = new Usuario();
-                        Console.WriteLine("Ingrese Id a eliminar: ");
-                        usuarioEliminado.Id = Convert.ToInt32(Console.ReadLine());
+                    //    break;
+                    //case 15:
+                    //    Usuario usuarioEliminado = new Usuario();
+                    //    Console.WriteLine("Ingrese Id a eliminar: ");
+                    //    usuarioEliminado.Id = Convert.ToInt32(Console.ReadLine());
 
-                        UsuarioData.EliminarUsuario(usuarioEliminado);
-                        break;
+                    //    UsuarioData.EliminarUsuario(usuarioEliminado);
+                    //    break;
+                    //case 16:
+                    //    Console.WriteLine("Obtener usuario ingresar Id: ");
+
+                    //    string idString = Console.ReadLine();
+                    //    int Id = Convert.ToInt32(idString);
+
+
+                    //    Usuario usuario = UsuarioData.ObtenerUsuario(Id);
+
+                    //    Console.WriteLine(usuario.Nombre);
+                    //    Console.WriteLine(usuario.Apellido);
+                    //    Console.WriteLine(usuario.NombreUsuario);
+                    //    Console.WriteLine(usuario.Contrasenia);
+                    //    Console.WriteLine(usuario.Mail);
+
+                    //    Console.WriteLine("");
+                    //    break;
+                    //case 17:
+                    //    List<Usuario> listarUsuario = UsuarioData.ListarUsuario();
+
+                    //    foreach (Usuario usuarioLista in listarUsuario)
+                    //    {
+
+                    //        Console.WriteLine("Nombre: " + usuarioLista.Nombre);
+                    //        Console.WriteLine("Apellido: " + usuarioLista.Apellido);
+                    //        Console.WriteLine("NombreUsuario: " + usuarioLista.NombreUsuario);
+                    //        Console.WriteLine("Contrasenia: " + usuarioLista.Contrasenia);
+                    //        Console.WriteLine("Mail: " + usuarioLista.Mail);
+
+                    //        Console.WriteLine("");
+
+                    //    }
+                    //    break;
+                    //case 18:
+                    //    Usuario usuarioCreado = new Usuario();
+
+                    //    Console.WriteLine("Ingrese Nombre: ");
+                    //    usuarioCreado.Nombre = Console.ReadLine();
+                    //    Console.WriteLine("Ingrese Apellido: ");
+                    //    usuarioCreado.Apellido = Console.ReadLine();
+                    //    Console.WriteLine("Ingrese NombreUsuario: ");
+                    //    usuarioCreado.NombreUsuario = Console.ReadLine();
+                    //    Console.WriteLine("Ingrese Contrasenia: ");
+                    //    usuarioCreado.Contrasenia = Console.ReadLine();
+                    //    Console.WriteLine("Ingrese Mail: ");
+                    //    usuarioCreado.Mail = Console.ReadLine();
+
+                    //    UsuarioData.CrearUsuario(usuarioCreado);
+
+
+                    //    break;
+                    //case 19:
+                    //    Usuario usuarioModificado = new Usuario();
+                    //    Console.WriteLine("Ingrese Id a modificar: ");
+                    //    usuarioModificado.Id = Convert.ToInt32(Console.ReadLine());
+                    //    Console.WriteLine("Ingrese Nombre a modificar: ");
+                    //    usuarioModificado.Nombre = Console.ReadLine();
+                    //    Console.WriteLine("Ingrese Apellido a modificar: ");
+                    //    usuarioModificado.Apellido = Console.ReadLine();
+                    //    Console.WriteLine("Ingrese NombreUsuario a modificar: ");
+                    //    usuarioModificado.NombreUsuario = Console.ReadLine();
+                    //    Console.WriteLine("Ingrese Contrasenia a modificar: ");
+                    //    usuarioModificado.Contrasenia = Console.ReadLine();
+                    //    Console.WriteLine("Ingrese Mail a modificar: ");
+                    //    usuarioModificado.Mail = Console.ReadLine();
+
+                    //    UsuarioData.ModificarUsuario(usuarioModificado);
+
+                    //    break;
+                    //case 20:
+                    //    Usuario usuarioEliminado = new Usuario();
+                    //    Console.WriteLine("Ingrese Id a eliminar: ");
+                    //    usuarioEliminado.Id = Convert.ToInt32(Console.ReadLine());
+
+                    //    UsuarioData.EliminarUsuario(usuarioEliminado);
+                    //    break;
 
                 }
                 Console.WriteLine("Desea continuar? Si/No");

@@ -21,7 +21,7 @@ namespace Desafio2Comision50285
         }
         public static Producto ObtenerProducto(int IdProducto)
         {
-            List<Producto> lista = new List<Producto>();
+            var producto = new Producto();
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 var query = "SELECT Id, Descripcion, Costo, PrecioVenta, Stock,IdUsuario FROM Producto WHERE Id=@IdProducto;";
@@ -41,21 +41,16 @@ namespace Desafio2Comision50285
 
                 while (reader.Read())
                 {
-                    var producto = new Producto();
                     producto.IdProducto = Convert.ToInt32(reader["IdProducto"]);
                     producto.Descripcion = reader["Descripcion"].ToString();
                     producto.Costo = Convert.ToDecimal(reader["Costo"]);
                     producto.PrecioVenta = Convert.ToDecimal(reader["PrecioVenta"]);
                     producto.Stock = Convert.ToInt32(reader["Stock"]);
                     producto.IdUsuario = Convert.ToInt32(reader["IdUsuario"]);
-                    lista.Add(producto);
-
-
-
                 }
             }
 
-            return lista;
+            return producto;
 
 
         }
